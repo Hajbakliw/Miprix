@@ -25,6 +25,8 @@ import { ProductChildComponent } from './components/home/new-product/product-chi
 import { CollectionChildComponent } from './components/home/collection/collection-child/collection-child.component';
 import { TopSellingChildComponent } from './components/home/top-selling/top-selling-child/top-selling-child.component';
 import { TopSelling2ChildComponent } from './components/home/top-selling2/top-selling2-child/top-selling2-child.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { TopSelling2ChildComponent } from './components/home/top-selling2/top-se
     ProductChildComponent,
     CollectionChildComponent,
     TopSellingChildComponent,
-    TopSelling2ChildComponent
+    TopSelling2ChildComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

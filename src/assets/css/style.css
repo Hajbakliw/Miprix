@@ -1,3 +1,97 @@
+element.style {
+  display: block;
+}
+#product-imgs .slick-next {
+  top: calc(100% - 20px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.slick-next {
+  right: -20px;
+}
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  border-radius: 50%;
+  z-index: 22;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.slick-next {
+  right: -25px;
+}
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button, select {
+  text-transform: none;
+}
+button {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+user agent stylesheet
+button {
+  appearance: auto;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
 /*
 Template Name: Electro - HTML Ecommerce Template
 Author: yaminncco
@@ -85,7 +179,17 @@ ul, ol {
   padding: 0;
   list-style: none
 }
-
+.radio{
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 15px;
+  margin-left:60px;
+  margin-top: 15px;
+  color:black ;
+}
+.facebook{
+  background: #32508e;
+}
 /*----------------------------*\
 	Buttons
 \*----------------------------*/
@@ -94,6 +198,69 @@ ul, ol {
   display: inline-block;
   padding: 12px 30px;
   background-color: #D10024;
+  border: none;
+  border-radius: 40px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.primary-btn2 {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 150px;
+  background-color: #32508e;
+  border: none;
+  border-radius: 40px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.primary-btn3 {
+  margin-top: 7px;
+  display: inline-block;
+  padding: 12px 160px;
+  background-color: #55acee;
+  border: none;
+  border-radius: 40px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.border-bottom{
+font-weight: 400;
+line-height: 1;
+-webkit-text-size-adjust: 100%;
+font-size: 1rem;
+font-family: inherit;
+-webkit-font-smoothing: antialiased;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+box-sizing: inherit;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+width: 333px;
+white-space: nowrap;
+border: 1px solid #d8d8d8;
+border-radius: 2px;
+margin-top: 11px!important;
+border-bottom: 0px;
+}
+
+.primary-btn4 {
+  margin-top: 7px;
+  display: inline-block;
+  padding: 12px 169px;
+  background-color: #dd4b3d;
   border: none;
   border-radius: 40px;
   color: #FFF;
