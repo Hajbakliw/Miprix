@@ -1,37 +1,116 @@
-
-		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">All Categories</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Headphones</a></li>
-							<li class="active">Product name goes here</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /BREADCRUMB -->
-<!-- <img src="assets/img/bg.jpg" width="100%" height="100%"> -->
-        <div class="login-box" >
-    <h1>Login</h1>
-    <div class="textbox">
-        <i class="far fa-user"></i>
-      <input type="text" placeholder="Nom d'utilisateur" name=""value="">
+<!-- NAVIGATION -->
+<nav id="navigation">
+    <!-- container -->
+    <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav" class="col-md-12">
+            <!-- NAV -->
+            <ul class="main-nav nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Hot Deals</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+            <!-- /NAV -->
+        </div>
+        <!-- /responsive-nav -->
     </div>
-    <div class="textbox">
-        <i class="fas fa-unlock-alt"></i>
-        <input type="password" placeholder="Mot de passe" name=""value="">
-      </div>
-      <input class="btn2" type="button" name="" value="Login">
+    <!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="breadcrumb-header">Checkout</h3>
+                <ul class="breadcrumb-tree">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Checkout</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
 </div>
-	
-<app-news-letter></app-news-letter>
+<!-- /BREADCRUMB -->
+
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-5 order-details" style="margin-left: 30%;">
+                <div class="limiter">
+                    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+                        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+                            <div class="section-title1 text-center">
+                                <h1 class="title" style="color: #D10024;">Login</h1>
+                            </div>
+                            <form [formGroup]="loginForm">
+                                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
+                                    <span class="label-input100">Email</span>
+                                    <input class="input100" type="text" formControlName='email'
+                                        placeholder="Type your email">
+                                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                                </div>
+                                <div *ngIf="loginForm.controls['email'].invalid  &&
+                                     (loginForm.controls['email'].dirty ||
+                                     loginForm.controls['email'].touched)">
+                                    <div *ngIf="loginForm.controls['email'].errors.email ||
+                                    loginForm.controls['email'].errors.required " style="color: red;">
+                                        Email is required
+                                    </div>
+                                </div>
+
+                                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                    <span class="label-input100">Password</span>
+                                    <input class="input100" type="password" [(ngModel)]='user.pwd'
+                                        [ngModelOptions]="{standalone:true}" placeholder="Type your password">
+                                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                                </div>
+
+                                <div class="text-right p-t-8 p-b-31">
+                                    <a href="#">
+                                        Forgot password?
+                                    </a>
+                                </div>
+
+                                <div class="container-login100-form-btn">
+                                    <div class="wrap-login100-form-btn">
+                                        <div class="login100-form-bgbtn"></div>
+                                        <button (click)="goToHome" class="login100-form-btn">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="txt1 text-center p-t-54 p-b-20">
+                                    <span>
+                                        You don't have an account ?
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <a class="primary-btn2 order-submit" style="margin-top: -10px;">Sign up</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dropDownSelect1"></div>

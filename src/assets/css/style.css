@@ -155,10 +155,11 @@ body {
   color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4, h5, h6 {
   color: #2B2D42;
   font-weight: 700;
   margin: 0 0 10px;
+
 }
 
 a {
@@ -208,33 +209,21 @@ ul, ol {
   transition: 0.2s all;
 }
 .primary-btn2 {
-  margin-top: 20px;
+ font-size: 25px;
   display: inline-block;
-  padding: 12px 150px;
-  background-color: #32508e;
+  padding: 12px 10px;
+  background-color: none;
   border: none;
   border-radius: 40px;
-  color: #FFF;
+  color: #D10024;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
-.primary-btn3 {
-  margin-top: 7px;
-  display: inline-block;
-  padding: 12px 160px;
-  background-color: #55acee;
-  border: none;
-  border-radius: 40px;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
+
+
 .border-bottom{
 font-weight: 400;
 line-height: 1;
@@ -255,7 +244,41 @@ border-radius: 2px;
 margin-top: 11px!important;
 border-bottom: 0px;
 }
+.dHVBa-D {
+  
+  display: table;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  margin: 0px auto 1em;
+  color:#B9BABC;
+  position: relative;
+  text-align: center;
+  width: 85%;
+}
+.dHVBa-D::before, .dHVBa-D::after {
+  border-top: 1px solid #B9BABC;
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 0.8em;
+  width: 42%;
+}
+::before, ::after {
+  box-sizing: border-box;
+}
+.dHVBa-D::before, .dHVBa-D::after {
+  border-top: 1px solid rgb(189, 189, 189);
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 0.8em;
+  width: 42%;
+}
 
+::before, ::after {
+  box-sizing: border-box;
+}
 .primary-btn4 {
   margin-top: 7px;
   display: inline-block;
@@ -463,6 +486,11 @@ textarea.input {
   padding-bottom: 30px;
 }
 
+.section-title1 {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: -65px;
+}
 .section-title {
   position: relative;
   margin-bottom: 30px;
@@ -2093,7 +2121,14 @@ textarea.input {
 .newsletter {
   text-align: center;
 }
-
+.newsletter .first {
+  
+    margin-top: 170px;
+    width: 800px;
+    size: 30px;
+  
+  
+}
 .newsletter p {
   font-size: 24px;
 }
@@ -2119,7 +2154,7 @@ textarea.input {
 }
 
 .newsletter form .input {
-  width: calc(100% - 160px);
+  width: calc(100% - 200px);
   margin-right: -4px;
   border-radius: 40px 0px 0px 40px;
 }

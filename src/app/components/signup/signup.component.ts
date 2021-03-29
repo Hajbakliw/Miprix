@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +9,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
-  constructor() { }
+  user: any={};
+  signupForm : FormGroup ;
+  constructor(
+    private FormBuilder: FormBuilder,
+    private userService:UserService,
+    private router:Router
+  ) { }
 
   ngOnInit() {
+    this.signupForm = this.FormBuilder.group({
+      firstName: ['', [Validators.minLength(3), Validators.required]],
+      lastName: ['', [Validators.minLength(3), Validators.required]],
+      email: ['', [Validators.email, Validators.required]],
+      pwd: ['', [Validators.minLength(8), Validators.required]],
+      confirmPwd: [''],
+    })
   }
-
+  signup(x) {
+    console.log('BTN clicked', x);
+    this.userService.signup(x).subscribe(
+      () => {
+        console.log('signup with success');
+        this.router.navigate(['first']);
+      }
+    )
+  }
+ 
 }
